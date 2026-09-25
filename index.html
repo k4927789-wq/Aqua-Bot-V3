@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Aqua Bot V3 — Creado por k4927789-wq</title>
+<link rel="icon" type="image/jpeg" href="https://inmiku.infinityfreeapp.com/u/ImMiku_562907dc.jpg">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- ===== FONDO ANIMADO ===== -->
+<div class="bubbles" aria-hidden="true">
+  <span style="left:8%;width:52px;height:52px;animation-duration:14s"></span>
+  <span style="left:22%;width:26px;height:26px;animation-duration:10s;animation-delay:2s"></span>
+  <span style="left:45%;width:70px;height:70px;animation-duration:18s;animation-delay:4s"></span>
+  <span style="left:63%;width:34px;height:34px;animation-duration:12s;animation-delay:1s"></span>
+  <span style="left:80%;width:48px;height:48px;animation-duration:15s;animation-delay:3s"></span>
+  <span style="left:92%;width:22px;height:22px;animation-duration:9s;animation-delay:5s"></span>
+</div>
+
+<!-- ===== PANTALLA DE ACCESO ===== -->
+<div id="authScreen">
+  <div class="auth-card">
+    <img class="logo" id="authLogo" alt="Aqua Bot V3">
+    <h1>💧 Aqua Bot V3</h1>
+    <div class="tag">Inicia sesión para guardar tus conversaciones en tu cuenta</div>
+    <div class="tabs">
+      <button id="tabLogin" class="active" type="button">Iniciar sesión</button>
+      <button id="tabRegister" type="button">Crear cuenta</button>
+    </div>
+    <div class="auth-error" id="authError"></div>
+    <form id="authForm" autocomplete="off">
+      <div class="field">
+        <label for="authUser">👤 Usuario</label>
+        <input id="authUser" maxlength="24" placeholder="Tu nombre de usuario" required>
+      </div>
+      <div class="field">
+        <label for="authPass">🔑 Contraseña</label>
+        <input id="authPass" type="password" maxlength="64" placeholder="••••••••" required>
+      </div>
+      <div class="field hidden" id="confirmField">
+        <label for="authPass2">🔑 Repetir contraseña</label>
+        <input id="authPass2" type="password" maxlength="64" placeholder="••••••••">
+      </div>
+      <div class="age-row hidden" id="ageRow">
+        <input type="checkbox" id="ageCheck">
+        <label for="ageCheck">Confirmo que tengo <b>18 años o más</b>. Entiendo que Aqua Bot V3 puede mostrar contenido <b>NSFW</b> y lo usaré bajo mi propia responsabilidad, fuera del alcance de menores.</label>
+      </div>
+      <button class="auth-btn" id="authBtn" type="submit">Iniciar sesión 💧</button>
+    </form>
+    <div class="auth-foot">💧 Aqua Bot V3 · Creado por <b>k4927789-wq</b></div>
+  </div>
+</div>
+
+<!-- ===== APLICACIÓN ===== -->
+<div class="wrap hidden" id="app">
+  <div class="chat-container" id="chatRoot">
+    <div class="header" id="header">
+      <div class="avatar-wrap"><img id="avatarImg" alt="Aqua"></div>
+      <div style="flex:1;min-width:140px">
+        <div class="title">💧 Aqua Bot V3</div>
+        <div class="sub"><span class="online"></span>en línea · <b>.menu</b> · por k4927789-wq</div>
+      </div>
+      <div class="header-actions">
+        <button class="hbtn" id="soundBtn" title="Sonido">🔊</button>
+        <button class="hbtn" id="exportBtn" title="Descargar conversación">📥</button>
+        <button class="hbtn" id="clearBtn" title="Limpiar chat">🧹</button>
+        <button class="hbtn" id="logoutBtn" title="Cerrar sesión">🚪</button>
+      </div>
+    </div>
+    <div class="userbar">
+      <span>👤 <b id="userLabel"></b></span>
+      <span class="save-hint"><span class="dot-ok"></span> conversación guardada automáticamente</span>
+    </div>
+    <div id="messages" role="log" aria-live="polite"></div>
+    <div class="chips" id="chips"></div>
+    <div class="input-area">
+      <input id="input" placeholder="Escribe un comando..." autocomplete="off" />
+      <button id="sendBtn">Enviar ➤</button>
+    </div>
+    <div class="footer-bar">💧 <b>Aqua Bot V3</b> · Creado por <b>k4927789-wq</b> · tus mensajes se guardan solo en tu dispositivo</div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
